@@ -39,11 +39,11 @@ namespace MovieApp
 
             app.UseStaticFiles(new StaticFileOptions
             {
-                FileProvider = new PhysicalFileProvider(Path.Combine(Directory.GetCurrentDirectory(), "lib")),
+                FileProvider = new PhysicalFileProvider(Path.Combine(Directory.GetCurrentDirectory(), "node_modules")),
                 RequestPath = "/modules"   //Burda ki modules aslýnda takma isim yani /lib in yerine bir isim                                         
-                                           //  lib/bootstrap/dist/css/bootstrap.min.css
+                                           // Dýþarý açýlan modules/bootstrap/dist/css/bootstrap.min.css
             });
-            
+
 
             if (env.IsDevelopment())
             {

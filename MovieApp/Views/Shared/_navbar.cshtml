@@ -1,0 +1,22 @@
+﻿@using MovieApp.Models
+@addTagHelper *, Microsoft.AspNetCore.Mvc.TagHelpers
+@addTagHelper *, AuthoringTagHelpers
+
+
+<div class="navbar navbar-expand-sm bg-primary navbar-dark">
+     @*mavi bir arka zemin ve üzeine gelecek yazı beyaz olsun*@
+
+    <div class="container">
+         @*İçerikleri container ile sağdan soldan biraz boşluklu yapalım*@
+        <a href="/" class="navbar-brand">Movie App</a>   @*Sol taraftaki yazı*@
+        <ul class="navbar-nav">
+            @*Sağ taraftaki linkler*@
+            <li class="nav-item">
+                <a href="/login" class="nav-link">Login</a>
+            </li>
+            <li class="nav-item">
+                <a href="/register" class="nav-link">Register</a>
+            </li>
+        </ul>
+    </div>
+</div>

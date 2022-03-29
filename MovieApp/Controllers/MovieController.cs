@@ -6,7 +6,8 @@ using System.Threading.Tasks;
 
 namespace MovieApp.Controllers
 {
-    public class MovieController : Controller      /* MovieController içerisinde Admin'in yapması gereken işleri yapalım. */
+    public class MovieController : Controller      /* MovieController içerisinde Admin'in yapması gereken işleri yapalım. 
+                                                    * Yönetici sayfaları içinde MovieController sayfasını kullanılır */
     {
         public IActionResult Index()       // Kullanıcıya ilk gösterilen alan( Bütün Movie bilgilerini gösterir )
         {
