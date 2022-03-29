@@ -1,1 +1,9 @@
-﻿<h1>Home/Index</h1>
+﻿<div class="row">
+    <div class="col-md-3">   <!--Sol tarafı 3 e böldüm-->
+    @Html.Partial("_menu")
+    </div>
+      
+    <div class="col-md-9">  <!--Ayırdığımız 9 lık bölmeye ise movie lerimizi yerleştirelim-->
+    @Html.Partial("_movies")
+    </div>
+</div>
