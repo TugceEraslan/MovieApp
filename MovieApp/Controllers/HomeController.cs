@@ -1,4 +1,5 @@
 ﻿using Microsoft.AspNetCore.Mvc;
+using MovieApp.Models;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -10,7 +11,8 @@ namespace MovieApp.Controllers
     {
         public IActionResult Index()  // Kullanıcı anasayfaya geldiğinde sadece onaylı movie bilgilerini görebilir
         {
-            return View();
+            return View(Repository.Movies);   // Repository.Movies bilgileri bana Index e getirdi.
+                                              // Ama index.cshtml inden de bu bilgileri almak için index.cshtml üzerinde de model oluşturmam gerekir
         }
 
         public IActionResult Contact()
