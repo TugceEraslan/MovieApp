@@ -2,37 +2,39 @@
 @addTagHelper *, Microsoft.AspNetCore.Mvc.TagHelpers
 @addTagHelper *, AuthoringTagHelpers
 
-@model Movie
+@model MovieCategoryModel
 
 <div class="row">
     <div class="col-md-3">
         <!--Sol tarafı 3 e böldüm-->
-        @Html.Partial("_menu")
+        @Html.Partial("_menu",Model.Categories)
     </div>
+    <!--Ayırdığımız 9 lık bölmeye ise movie lerimizi yerleştirelim-->
     <div class="col-md-9">
+        <!---Detay sayfası için <div class="card mb-3"> class ını dışarı yazarak padding değerini vermek istedim. -->
         <div class="card mb-3">
 
             <div class="card-body">
                 <div class="row no-gutter">
                     <div class="col-md-4">
-                        <img src="~/img/@Model.ImageUrl" alt="@Model.Description" class="card-img">
+                        <img src="~/img/@Model.Movie.ImageUrl" alt="@Model.Movie.Description" class="card-img">
                     </div>
-                        <div class="col-md-8">
-                            <h5 class="card-title">
-                                <a asp-action="Details" asp-controller="Home" asp-route-id="@Model.Id">@Model.Name</a>  
-                            </h5>
-                            <p class="card-text">
-                                @Html.Raw(Model.Description)
-                            </p>
-                            <p class="card-text">
-                                <small class="text-muted">3 days ago</small>
-                            </p>
+                    <div class="col-md-8">
+                        <h5 class="card-title">
+                            <a asp-action="Details" asp-controller="Home" asp-route-id="@Model.Movie.Id">@Model.Movie.Name</a>
+                        </h5>
+                        <p class="card-text">
+                            @Html.Raw(Model.Movie.Description)
+                        </p>
+                        <p class="card-text">
+                            <small class="text-muted">3 days ago</small>
+                        </p>
 
-                        </div>
+                    </div>
                 </div>
             </div>
-                <!--Sol tarafta resim olmasını istiyorum-->
-            </div>
+            <!--Sol tarafta resim olmasını istiyorum-->
         </div>
-   </div>
+    </div>
+</div>
   

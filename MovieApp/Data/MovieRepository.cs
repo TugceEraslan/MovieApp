@@ -1,17 +1,18 @@
-﻿using System;
+﻿using MovieApp.Models;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
 
-namespace MovieApp.Models
+namespace MovieApp.Data
 {
-    public static class Repository  // Repository static olacak yani bir örnek oluşturulamayan. Sadece uygulamaya özel bir Repository sınıfının olacağı yapı
+    public static class MovieRepository  // Repository static olacak yani bir örnek oluşturulamayan. Sadece uygulamaya özel bir Repository sınıfının olacağı yapı
     {
 
 
         private static List<Movie> _movies = null;
 
-        static Repository()
+        static MovieRepository()
         {
             _movies = new List<Movie>()    // Movie içerisine örnek bir liste ekleyeceğim
             {
