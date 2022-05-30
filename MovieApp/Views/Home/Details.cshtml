@@ -9,11 +9,30 @@
         <!--Sol tarafı 3 e böldüm-->
         @Html.Partial("_menu")
     </div>
-
     <div class="col-md-9">
-        <!--Ayırdığımız 9 lık bölmeye ise movie lerimizi yerleştirelim-->
-        @*@Html.Partial("_movies", Model)*@
-        <!-- Bu sayfada iki aşamalı bir model aktarımı mevcut-->
-        <partial name="_movies" model="Model" />
-    </div>
-</div>
+        <div class="card mb-3">
+
+            <div class="card-body">
+                <div class="row no-gutter">
+                    <div class="col-md-4">
+                        <img src="~/img/@Model.ImageUrl" alt="@Model.Description" class="card-img">
+                    </div>
+                        <div class="col-md-8">
+                            <h5 class="card-title">
+                                <a asp-action="Details" asp-controller="Home" asp-route-id="@Model.Id">@Model.Name</a>  
+                            </h5>
+                            <p class="card-text">
+                                @Html.Raw(Model.Description)
+                            </p>
+                            <p class="card-text">
+                                <small class="text-muted">3 days ago</small>
+                            </p>
+
+                        </div>
+                </div>
+            </div>
+                <!--Sol tarafta resim olmasını istiyorum-->
+            </div>
+        </div>
+   </div>
+  
