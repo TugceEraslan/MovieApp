@@ -10,19 +10,17 @@ namespace MovieApp.Controllers
 {
     public class HomeController : Controller  /* Kullanıcı sayfaları için HomeController kullanılır */
     {
-        public IActionResult Index()  // Kullanıcı anasayfaya geldiğinde sadece onaylı movie bilgilerini görebilir
+       // Home/Index/3
+        public IActionResult Index(int? id)  // Kullanıcı anasayfaya geldiğinde sadece onaylı movie bilgilerini görebilir
         {
-            // Repository.Movies bilgileri bana Index e getirdi.
-            // Ama index.cshtml inden de bu bilgileri almak için index.cshtml üzerinde de model oluşturmam gerekir
-            // MovieRepository.Movies
-            // CategoryRepository.Categories
-            //return View(MovieRepository.Movies);
-            //
-            //MovieCategoryModel model = new MovieCategoryModel();
-            //model.Categories = CategoryRepository.Categories;
-            //model.Movies = MovieRepository.Movies;
+            var movies = MovieRepository.Movies;
 
-            return View(MovieRepository.Movies);        
+            if(id!=null)  // id null dan farklı ise filtreleme yapmamız gerekir
+            {
+                movies = movies.Where(i => i.CategoryId == id).ToList();
+            }
+
+            return View(movies);        
         }
 
         public IActionResult Details(int id)   // _movies.cshtml de ki  asp-route-id="@movie.Id" için home controller daki details action undan beklenen id olacak

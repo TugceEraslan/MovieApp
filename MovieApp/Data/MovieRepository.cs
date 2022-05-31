@@ -23,7 +23,8 @@ namespace MovieApp.Data
                     Name="Shazam", 
                     ShortDescription="Shazam",
                     Description="<p>A beautiful and contemporary retelling of Colin Thiele's classic Australian tale. 'Storm Boy' has grown up to be Michael Kingley, a successful retired businessman and grandfather.</p> <p>When Kingley starts to see images from his past that he can't explain, he is forced to remember his long-forgotten childhood, growing up on an isolated coastline with his father. He recounts to his grand-daughter the story of how, as a boy, he rescued and raised an extraordinary orphaned pelican, Mr Percival.</p><p> Their remarkable adventures and very special bond has a profound effect on all their lives. Based on the beloved book, Storm Boy is a timeless story of an unusual and unconditional friendship.</p>", 
-                    ImageUrl="1.jpg"
+                    ImageUrl="1.jpg",
+                    CategoryId=1
                 },
                 new Movie() 
                 { 
@@ -31,7 +32,8 @@ namespace MovieApp.Data
                     Name="Amazing Grace",
                     ShortDescription="Amazing Grace",
                     Description="<p>A beautiful and contemporary retelling of Colin Thiele's classic Australian tale. 'Storm Boy' has grown up to be Michael Kingley, a successful retired businessman and grandfather.</p> <p>When Kingley starts to see images from his past that he can't explain, he is forced to remember his long-forgotten childhood, growing up on an isolated coastline with his father. He recounts to his grand-daughter the story of how, as a boy, he rescued and raised an extraordinary orphaned pelican, Mr Percival.</p><p> Their remarkable adventures and very special bond has a profound effect on all their lives. Based on the beloved book, Storm Boy is a timeless story of an unusual and unconditional friendship.</p>", 
-                    ImageUrl="2.jpg"
+                    ImageUrl="2.jpg",
+                    CategoryId=2
                 },
                 new Movie() 
                 { 
@@ -39,7 +41,8 @@ namespace MovieApp.Data
                     Name="High Life",
                     ShortDescription="High Life",
                     Description="<p>A beautiful and contemporary retelling of Colin Thiele's classic Australian tale. 'Storm Boy' has grown up to be Michael Kingley, a successful retired businessman and grandfather.</p> <p>When Kingley starts to see images from his past that he can't explain, he is forced to remember his long-forgotten childhood, growing up on an isolated coastline with his father. He recounts to his grand-daughter the story of how, as a boy, he rescued and raised an extraordinary orphaned pelican, Mr Percival.</p><p> Their remarkable adventures and very special bond has a profound effect on all their lives. Based on the beloved book, Storm Boy is a timeless story of an unusual and unconditional friendship.</p>", 
-                    ImageUrl="3.jpg"
+                    ImageUrl="3.jpg",
+                    CategoryId=2,
                 },
                 new Movie() 
                 { 
@@ -47,7 +50,8 @@ namespace MovieApp.Data
                     Name="Billboard",
                     ShortDescription="Billboard",
                     Description="<p>A beautiful and contemporary retelling of Colin Thiele's classic Australian tale. 'Storm Boy' has grown up to be Michael Kingley, a successful retired businessman and grandfather.</p> <p>When Kingley starts to see images from his past that he can't explain, he is forced to remember his long-forgotten childhood, growing up on an isolated coastline with his father. He recounts to his grand-daughter the story of how, as a boy, he rescued and raised an extraordinary orphaned pelican, Mr Percival.</p><p> Their remarkable adventures and very special bond has a profound effect on all their lives. Based on the beloved book, Storm Boy is a timeless story of an unusual and unconditional friendship.</p>", 
-                    ImageUrl="4.jpg"
+                    ImageUrl="4.jpg",
+                    CategoryId=3
                 },
                 new Movie() 
                 {
@@ -55,7 +59,8 @@ namespace MovieApp.Data
                     Name="Storm Boy",
                     ShortDescription="Storm Boy",
                     Description="<p>A beautiful and contemporary retelling of Colin Thiele's classic Australian tale. 'Storm Boy' has grown up to be Michael Kingley, a successful retired businessman and grandfather.</p> <p>When Kingley starts to see images from his past that he can't explain, he is forced to remember his long-forgotten childhood, growing up on an isolated coastline with his father. He recounts to his grand-daughter the story of how, as a boy, he rescued and raised an extraordinary orphaned pelican, Mr Percival.</p><p> Their remarkable adventures and very special bond has a profound effect on all their lives. Based on the beloved book, Storm Boy is a timeless story of an unusual and unconditional friendship.</p>",
-                    ImageUrl="5.jpg"
+                    ImageUrl="5.jpg",
+                    CategoryId=3
                 }
             };
         }

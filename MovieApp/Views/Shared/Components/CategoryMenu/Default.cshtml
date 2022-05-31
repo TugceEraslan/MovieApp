@@ -6,9 +6,17 @@
 
 <div class="list-group">
 
+    <a href="/" class="list-group-item list-group-item-action ">
+        Tüm Kategoriler
+    </a>
+
+
     @foreach (var category in Model)
     {
-        <a href="#" class="list-group-item list-group-item-action ">@category.Name</a>
+        <a asp-controller="Home" asp-action="Index" asp-route-id="@category.Id"
+           class="list-group-item list-group-item-action ">
+            @category.Name
+        </a>
     }
 
 
