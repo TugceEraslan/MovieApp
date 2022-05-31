@@ -2,12 +2,14 @@
 @addTagHelper *, Microsoft.AspNetCore.Mvc.TagHelpers
 @addTagHelper *, AuthoringTagHelpers
 
-@model MovieCategoryModel
+@model Movie  
+@* Model in kendisi Movie bilgisi*@
 
 <div class="row">
     <div class="col-md-3">
         <!--Sol tarafı 3 e böldüm-->
-        @Html.Partial("_menu",Model.Categories)
+        @*@Html.Partial("_menu",Model.Categories)*@
+        @await Component.InvokeAsync("CategoryMenu")
     </div>
     <!--Ayırdığımız 9 lık bölmeye ise movie lerimizi yerleştirelim-->
     <div class="col-md-9">
@@ -17,14 +19,14 @@
             <div class="card-body">
                 <div class="row no-gutter">
                     <div class="col-md-4">
-                        <img src="~/img/@Model.Movie.ImageUrl" alt="@Model.Movie.Description" class="card-img">
+                        <img src="~/img/@Model.ImageUrl" alt="@Model.Description" class="card-img">
                     </div>
                     <div class="col-md-8">
                         <h5 class="card-title">
-                            <a asp-action="Details" asp-controller="Home" asp-route-id="@Model.Movie.Id">@Model.Movie.Name</a>
+                            <a asp-action="Details" asp-controller="Home" asp-route-id="@Model.Id">@Model.Name</a>
                         </h5>
                         <p class="card-text">
-                            @Html.Raw(Model.Movie.Description)
+                            @Html.Raw(Model.Description)
                         </p>
                         <p class="card-text">
                             <small class="text-muted">3 days ago</small>

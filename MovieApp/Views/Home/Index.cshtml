@@ -2,16 +2,17 @@
 @addTagHelper *, Microsoft.AspNetCore.Mvc.TagHelpers
 @addTagHelper *, AuthoringTagHelpers
 
-@model MovieCategoryModel
+@model IEnumerable<Movie>
 
 <div class="row">
     <div class="col-md-3">
         <!--Sol tarafı 3 e böldüm-->
-        @Html.Partial("_menu",Model.Categories)
+        @*@Html.Partial("_menu",Model.Categories)*@   @*Daha önce partial view olarak çağırıyorduk*@
+        @await Component.InvokeAsync("CategoryMenu")  @*await ile asenkron bir şekilde çağırıyoruz*@
     </div>
 
     <div class="col-md-9">
         <!--Ayırdığımız 9 lık bölmeye ise movie lerimizi yerleştirelim-->
-       @Html.Partial("_movies", Model.Movies) 
+       @Html.Partial("_movies", Model) <!--Model in kendisi de bir liste-->
     </div>
 </div>

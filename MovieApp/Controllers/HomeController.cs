@@ -18,11 +18,11 @@ namespace MovieApp.Controllers
             // CategoryRepository.Categories
             //return View(MovieRepository.Movies);
             //
-            MovieCategoryModel model = new MovieCategoryModel();
-            model.Categories = CategoryRepository.Categories;
-            model.Movies = MovieRepository.Movies;
+            //MovieCategoryModel model = new MovieCategoryModel();
+            //model.Categories = CategoryRepository.Categories;
+            //model.Movies = MovieRepository.Movies;
 
-            return View(model);        
+            return View(MovieRepository.Movies);        
         }
 
         public IActionResult Details(int id)   // _movies.cshtml de ki  asp-route-id="@movie.Id" için home controller daki details action undan beklenen id olacak
@@ -31,7 +31,7 @@ namespace MovieApp.Controllers
             model.Categories = CategoryRepository.Categories;
             model.Movie = MovieRepository.GetById(id);
 
-            return View(model);
+            return View(MovieRepository.GetById(id));   // Tek bir movie bilgisini sayfaya göndermek
             //return View(MovieRepository.GetById(id));   // GetById(id) benden Details action undan gönderilen id parametresi bekliyor
                                                    // ve bende bu id gönderince Repository.GetById(id) ile bana tek bir movie gönderiyor.Sayfaya tek bir model
                                                    //göndermektense model gönderelim
